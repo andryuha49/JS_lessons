@@ -1,0 +1,41 @@
+<html>
+<body>
+<script language="JavaScript"> 
+function createTable() 
+    { 
+     
+    var newElem=document.createElement("table");//создаЄм новый элемент страницы (TABLE) 
+    newElem.border=1;//указывает толщину рамки таблицы 
+     
+    var newRow=newElem.insertRow(0);//добавл€ем строку в созданной таблице 
+    var newCell = newRow.insertCell(0);//в созданной строке добавл€ем столбец 
+    newCell.width="200";//указываем длину столбца равной 200 пикселей 
+    newCell.align="center";//указываем позиционирование по центру 
+    newCell.innerHTML="<b>строка 1 столбец 1</b>";//заполн€ем €чейку жирным текстом 
+     
+    var newCell = newRow.insertCell(-1);//добавл€ем ещЄ один столбец 
+    newCell.width="400";//указываем длину столбца равной 400 пикселей 
+    newCell.align="center";//указываем позиционирование по центру 
+    newCell.innerText="<b>строка 1 столбец 2</b>";//заполн€ем €чейку текстом 
+     
+    var newRow=newElem.insertRow(1);//добавл€ем ещЄ одну строку в таблицу 
+    var newCell = newRow.insertCell(0); //в созданной строке добавл€ем столбец 
+    newCell.width="200";//указываем длину столбца равной 200 пикселей 
+    newCell.align="center";//указываем позиционирование по центру 
+     
+    addText=document.createTextNode("<b>строка 2 столбец 1</b>");//генерируем текстовый узел 
+    newCell.appendChild(addText);//созданный текстовый узел добавл€ем в €чейку 
+     
+    var newCell = newRow.insertCell(-1); //добавл€ем ещЄ один столбец 
+    newCell.width="400";//указываем длину столбца равной 400 пикселей 
+    newCell.align="center";//указываем позиционирование по центру 
+    addElem=document.createElement("b");//создаЄм новый элемент страницы (B) 
+    addText=document.createTextNode("строка 2 столбец 2");//генерируем текстовый узел 
+    addElem.appendChild(addText);//созданный текстовый узел добавл€ем к новому элементу (addElem) 
+    newCell.appendChild(addElem);//полученный узел (addElem) добавл€ем в €чейку 
+     
+    document.body.appendChild(newElem);//прописываем созданную таблицу на страницу 
+    } 
+</script>
+</body>
+</html>
