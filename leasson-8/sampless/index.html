@@ -1,41 +1,109 @@
 <html>
+<head>
+    <title></title>
+    <style>
+        td{border: 1px solid red}
+    </style>
+</head>
 <body>
-<script language="JavaScript"> 
-function createTable() 
-    { 
-     
-    var newElem=document.createElement("table");//создаём новый элемент страницы (TABLE) 
-    newElem.border=1;//указывает толщину рамки таблицы 
-     
-    var newRow=newElem.insertRow(0);//добавляем строку в созданной таблице 
-    var newCell = newRow.insertCell(0);//в созданной строке добавляем столбец 
-    newCell.width="200";//указываем длину столбца равной 200 пикселей 
-    newCell.align="center";//указываем позиционирование по центру 
-    newCell.innerHTML="<b>строка 1 столбец 1</b>";//заполняем ячейку жирным текстом 
-     
-    var newCell = newRow.insertCell(-1);//добавляем ещё один столбец 
-    newCell.width="400";//указываем длину столбца равной 400 пикселей 
-    newCell.align="center";//указываем позиционирование по центру 
-    newCell.innerText="<b>строка 1 столбец 2</b>";//заполняем ячейку текстом 
-     
-    var newRow=newElem.insertRow(1);//добавляем ещё одну строку в таблицу 
-    var newCell = newRow.insertCell(0); //в созданной строке добавляем столбец 
-    newCell.width="200";//указываем длину столбца равной 200 пикселей 
-    newCell.align="center";//указываем позиционирование по центру 
-     
-    addText=document.createTextNode("<b>строка 2 столбец 1</b>");//генерируем текстовый узел 
-    newCell.appendChild(addText);//созданный текстовый узел добавляем в ячейку 
-     
-    var newCell = newRow.insertCell(-1); //добавляем ещё один столбец 
-    newCell.width="400";//указываем длину столбца равной 400 пикселей 
-    newCell.align="center";//указываем позиционирование по центру 
-    addElem=document.createElement("b");//создаём новый элемент страницы (B) 
-    addText=document.createTextNode("строка 2 столбец 2");//генерируем текстовый узел 
-    addElem.appendChild(addText);//созданный текстовый узел добавляем к новому элементу (addElem) 
-    newCell.appendChild(addElem);//полученный узел (addElem) добавляем в ячейку 
-     
-    document.body.appendChild(newElem);//прописываем созданную таблицу на страницу 
-    } 
-</script>
+    <script language="JavaScript">
+        function createTable() {
+
+            var newElem = document.createElement("table"); //СЃРѕР·РґР°С‘Рј РЅРѕРІС‹Р№ СЌР»РµРјРµРЅС‚ СЃС‚СЂР°РЅРёС†С‹ (TABLE)
+            newElem.border = 1; //СѓРєР°Р·С‹РІР°РµС‚ С‚РѕР»С‰РёРЅСѓ СЂР°РјРєРё С‚Р°Р±Р»РёС†С‹
+
+            var newRow = newElem.insertRow(0); //РґРѕР±Р°РІР»СЏРµРј СЃС‚СЂРѕРєСѓ РІ СЃРѕР·РґР°РЅРЅРѕР№ С‚Р°Р±Р»РёС†Рµ
+            var newCell = newRow.insertCell(0); //РІ СЃРѕР·РґР°РЅРЅРѕР№ СЃС‚СЂРѕРєРµ РґРѕР±Р°РІР»СЏРµРј СЃС‚РѕР»Р±РµС†
+            newCell.width = "200"; //СѓРєР°Р·С‹РІР°РµРј РґР»РёРЅСѓ СЃС‚РѕР»Р±С†Р° СЂР°РІРЅРѕР№ 200 РїРёРєСЃРµР»РµР№
+            newCell.align = "center"; //СѓРєР°Р·С‹РІР°РµРј РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РїРѕ С†РµРЅС‚СЂСѓ
+            newCell.innerHTML = "<b>СЃС‚СЂРѕРєР° 1 СЃС‚РѕР»Р±РµС† 1</b>"; //Р·Р°РїРѕР»РЅСЏРµРј СЏС‡РµР№РєСѓ Р¶РёСЂРЅС‹Рј С‚РµРєСЃС‚РѕРј
+
+            var newCell = newRow.insertCell(-1); //РґРѕР±Р°РІР»СЏРµРј РµС‰С‘ РѕРґРёРЅ СЃС‚РѕР»Р±РµС†
+            newCell.width = "400"; //СѓРєР°Р·С‹РІР°РµРј РґР»РёРЅСѓ СЃС‚РѕР»Р±С†Р° СЂР°РІРЅРѕР№ 400 РїРёРєСЃРµР»РµР№
+            newCell.align = "center"; //СѓРєР°Р·С‹РІР°РµРј РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РїРѕ С†РµРЅС‚СЂСѓ
+            newCell.innerText = "<b>СЃС‚СЂРѕРєР° 1 СЃС‚РѕР»Р±РµС† 2</b>"; //Р·Р°РїРѕР»РЅСЏРµРј СЏС‡РµР№РєСѓ С‚РµРєСЃС‚РѕРј
+
+            var newRow = newElem.insertRow(1); //РґРѕР±Р°РІР»СЏРµРј РµС‰С‘ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ РІ С‚Р°Р±Р»РёС†Сѓ
+            var newCell = newRow.insertCell(0); //РІ СЃРѕР·РґР°РЅРЅРѕР№ СЃС‚СЂРѕРєРµ РґРѕР±Р°РІР»СЏРµРј СЃС‚РѕР»Р±РµС†
+            newCell.width = "200"; //СѓРєР°Р·С‹РІР°РµРј РґР»РёРЅСѓ СЃС‚РѕР»Р±С†Р° СЂР°РІРЅРѕР№ 200 РїРёРєСЃРµР»РµР№
+            newCell.align = "center"; //СѓРєР°Р·С‹РІР°РµРј РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РїРѕ С†РµРЅС‚СЂСѓ
+
+            addText = document.createTextNode("<b>СЃС‚СЂРѕРєР° 2 СЃС‚РѕР»Р±РµС† 1</b>"); //РіРµРЅРµСЂРёСЂСѓРµРј С‚РµРєСЃС‚РѕРІС‹Р№ СѓР·РµР»
+            newCell.appendChild(addText); //СЃРѕР·РґР°РЅРЅС‹Р№ С‚РµРєСЃС‚РѕРІС‹Р№ СѓР·РµР» РґРѕР±Р°РІР»СЏРµРј РІ СЏС‡РµР№РєСѓ
+
+            var newCell = newRow.insertCell(-1); //РґРѕР±Р°РІР»СЏРµРј РµС‰С‘ РѕРґРёРЅ СЃС‚РѕР»Р±РµС†
+            newCell.width = "400"; //СѓРєР°Р·С‹РІР°РµРј РґР»РёРЅСѓ СЃС‚РѕР»Р±С†Р° СЂР°РІРЅРѕР№ 400 РїРёРєСЃРµР»РµР№
+            newCell.align = "center"; //СѓРєР°Р·С‹РІР°РµРј РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РїРѕ С†РµРЅС‚СЂСѓ
+            addElem = document.createElement("b"); //СЃРѕР·РґР°С‘Рј РЅРѕРІС‹Р№ СЌР»РµРјРµРЅС‚ СЃС‚СЂР°РЅРёС†С‹ (B)
+            addText = document.createTextNode("СЃС‚СЂРѕРєР° 2 СЃС‚РѕР»Р±РµС† 2"); //РіРµРЅРµСЂРёСЂСѓРµРј С‚РµРєСЃС‚РѕРІС‹Р№ СѓР·РµР»
+            addElem.appendChild(addText); //СЃРѕР·РґР°РЅРЅС‹Р№ С‚РµРєСЃС‚РѕРІС‹Р№ СѓР·РµР» РґРѕР±Р°РІР»СЏРµРј Рє РЅРѕРІРѕРјСѓ СЌР»РµРјРµРЅС‚Сѓ (addElem)
+            newCell.appendChild(addElem); //РїРѕР»СѓС‡РµРЅРЅС‹Р№ СѓР·РµР» (addElem) РґРѕР±Р°РІР»СЏРµРј РІ СЏС‡РµР№РєСѓ
+
+            document.body.appendChild(newElem); //РїСЂРѕРїРёСЃС‹РІР°РµРј СЃРѕР·РґР°РЅРЅСѓСЋ С‚Р°Р±Р»РёС†Сѓ РЅР° СЃС‚СЂР°РЅРёС†Сѓ
+        }
+    </script>
+
+<table align="center" border="1">
+    <colgroup ><col/><col style="background-color: blueviolet" ></colgroup> 
+    <caption>Table</caption>
+    <thead>
+    <tr>
+        <th>col1</th>
+        <th>col2</th>
+
+        <th>col3</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr >
+        <td >data1</td>
+        <td>tata2</td>
+        <td>tata2</td>
+    </tr>
+    <tr>
+        <td>data1</td>
+        <td>tata dsfgdfg dfghdfg dfgdfg fgsdfgd sdfgsdf2</td>
+        <td>tata2</td>
+        <td>tata2</td>
+    </tr>
+    </tbody>
+
+    <tr>
+        <td>data3</td>
+        <td>tata4</td>
+        <td>tata4</td>
+    </tr>
+    <tr>
+        <td>data3</td>
+        <td>tata4</td>
+        <td>tata4</td>
+    </tr>
+    <tfoot></tfoot>
+</table>
+
+
+<form action="http://google.com" method="post" style="border: 1px solid gray; padding: 10px; background-image: url('google.com/img.png')" ENCTYPE="multipart/form-data">
+    <input type="radio" value="r1" name="rad"/>
+    <input type="radio" value="r2"  name="rad"/>
+
+    <input type="checkbox" value="1" name="check"/>
+    <input type="text" value="123" name="text"/>
+    <input type="email" name="email"/>
+    <input type="tel" name="tel"/>
+    <input type="date" name="date"/>
+    <input type="number" name="num"/>
+    <textarea name="area"></textarea>
+    <select name="sel"><option value="1">1</option><option value="2">2</option></select>
+
+    <input type="file" name="file"/>
+
+    <input type="password" value="" name="pass"/>
+    <input type="button" value="bott"/>
+    <input type="submit" value="sub"/>
+    <input type="reset" value="res"/>
+    <button><b>ddd</b> sss</button>
+</form>
+
 </body>
 </html>
